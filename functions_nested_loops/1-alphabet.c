@@ -1,6 +1,8 @@
 #include "main.h"
 /**
- * main - Entry point
+ * print_alphabet - print alphabet
+ * i: un compteur
+ *
  * Return: Always (0)(Success)
  */
 void print_alphabet(void)
@@ -9,7 +11,7 @@ void print_alphabet(void)
 
 	for (i = 97; i < 123; i++)
 	{
-		print_alphabet();
+		_putchar(i);
 	}
 _putchar('\n');
 }
