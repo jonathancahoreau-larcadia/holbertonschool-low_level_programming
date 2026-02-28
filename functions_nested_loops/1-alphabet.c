@@ -1,9 +1,6 @@
 #include "main.h"
 /**
  * print_alphabet - print alphabet
- * i: un compteur
- *
- * Return: Always (0)(Success)
  */
 void print_alphabet(void)
 {
