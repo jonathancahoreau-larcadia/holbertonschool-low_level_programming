@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _abs - donne la valeur absolu d'un nombre
+ * _abs - donne la valeur absolue d'un nombre
  * @n: est le nom de l'entier
  *
  * Return: renvoie un nombre positif dans tous les cas

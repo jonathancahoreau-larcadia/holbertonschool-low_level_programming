@@ -19,10 +19,18 @@ int main(void)
 	printf("Choice: ");
 	scanf("%d", &choice);
 
-	if (choice == 0)
+
+	while (choice > 4)
 	{
-	printf("Bye!\n");
-	}
+		printf("Invalid choice\n");
+		printf("Choice: ");
+		scanf("%d", &choice);
+		if (choice == 0)
+		{
+			printf("Bye!\n");
+			return (0);
+		}
+		}
 
 return (0);
 }

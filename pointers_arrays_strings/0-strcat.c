@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * _strcat - concatener 2 chaines de caracteres
  * @dest: un caractere
@@ -24,5 +23,5 @@ char *_strcat(char *dest, char *src)
 	}
 	*p = ('\0');
 
-return (dest);
+return (p);
 }
