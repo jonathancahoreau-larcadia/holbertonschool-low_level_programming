@@ -42,6 +42,16 @@ int main(void)
 			result = number_a - number_b;
 			printf("Result: %d\n\n", result);
 		}
+		else if (choice == multiply)
+		{
+			printf("A: ");
+			scanf("%d", &number_a);
+			printf("B: ");
+			scanf("%d", &number_b);
+
+			result = number_a * number_b;
+			printf("Result: %d\n\n", result);
+		}
 
 		else if (choice != quit && choice > 4)
 		{
