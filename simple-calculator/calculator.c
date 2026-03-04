@@ -10,7 +10,7 @@ int main(void)
 	int add = 1, subtract = 2, multiply = 3, divide = 4, quit = 0;
 	int choice = 0;
 	int number_a = 0, number_b = 0;
-	int result_add;
+	int result = 0;
 
 	do {
 		printf("Simple Calculator\n");
@@ -29,15 +29,24 @@ int main(void)
 			printf("B: ");
 			scanf("%d", &number_b);
 
-			result_add = number_a + number_b;
-			printf("Result: %d\n", result_add);
+			result = number_a + number_b;
+			printf("Result: %d\n\n", result);
+		}
+		else if (choice == subtract)
+		{
+			printf("A: ");
+			scanf("%d", &number_a);
+			printf("B: ");
+			scanf("%d", &number_b);
+
+			result = number_a - number_b;
+			printf("Result: %d\n\n", result);
 		}
 
-		if (choice != quit)
+		else if (choice != quit && choice > 4)
 		{
-			printf("Invalid choice\n");
-			printf("Choice: ");
-			scanf("%d", &choice);
+			printf("Invalid choice\n\n");
+
 		}
 
 	} while (choice != quit);
