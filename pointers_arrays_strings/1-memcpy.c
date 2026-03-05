@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
  * _memcpy - copie la vzleur de la memoire n fois
  * @dest: pointeur sur chaine de char
