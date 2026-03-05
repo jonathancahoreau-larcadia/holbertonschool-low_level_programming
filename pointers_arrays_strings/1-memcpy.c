@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _memcpy - copie la vzleur de la memoire n fois
@@ -11,12 +12,13 @@
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	char *d = dest;
-	char *s = src;
 
-	while (n--)
+	while (n > 0)
 	{
-		*d = *s;
-		dest++ = src++;
+		*d = *src;
+		d++;
+		src++;
+		n--;
 	}
 return (dest);
 }
