@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * _memcpy - copie la vzleur de la memoire n fois
  * @dest: pointeur sur chaine de char
@@ -9,14 +10,11 @@
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	char *p = dest;
-
-	while (*src != 0 && n > 0)
+	while (n--)
 	{
-		*p = *src;
-		p++;
+		*dest = *src;
 		src++;
-		n--;
+		dest++;
 	}
 return (dest);
 }
