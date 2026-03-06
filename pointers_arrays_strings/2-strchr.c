@@ -2,16 +2,18 @@
 #include <stdio.h>
 
 /**
- * main - check the code
+ * _strchr - cherche un caractere/ affiche la chaine a partir de ce caractere
+ * @s: chaine d'origine
+ * @c: lettre de recherche
  *
- * Return: Always 0.
+ * Return: (s) la chaine à afficher ; null si pas de correspondance
  */
 
 char *_strchr(char *s, char c)
 {
 	int i = 0;
 
-	for (i = 0; s[i] != '\0'; i++ )
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] == c)
 		{
@@ -20,19 +22,4 @@ char *_strchr(char *s, char c)
 		}
 	}
 return (NULL);
-}
-
-
-int main(void)
-{
-    char *s = "hello";
-    char *f;
-
-    f = _strchr(s, 'l');
-
-    if (f != NULL)
-    {
-        printf("%s\n", f);
-    }
-    return (0);
 }
