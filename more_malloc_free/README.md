@@ -1,0 +1,1 @@
+#on développe les compétences sur malloc, calloc, realloc, free
