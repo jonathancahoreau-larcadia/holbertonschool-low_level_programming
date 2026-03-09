@@ -7,7 +7,7 @@
  * @size : un entier représentant la taille
  * @c: un caractere
  *
- * Return: () le tableau
+ * Return: (tab) le tableau
  */
 char *create_array(unsigned int size, char c)
 {
