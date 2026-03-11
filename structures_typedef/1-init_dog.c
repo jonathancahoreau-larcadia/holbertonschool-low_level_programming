@@ -1,21 +1,19 @@
 #include <stdio.h>
 #include "dog.h"
 
-
+/**
+ * init_dog - nom de la fonction
+ * @d: pointe l'adresse de struct dog
+ * @name: pointe sur la chaine de caractere du nom
+ * @age: un float correspondant à la valeur de l'age
+ * @owner: pointe sur la chaine de caractere propriétaire
+ */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	
-}
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    struct dog my_dog;
+	if (d == NULL)
+	return;
 
-    init_dog(&my_dog, "Poppy", 3.5, "Bob");
-    printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog.name, my_dog.age);
-    return (0);
+	d->name = name;
+	d->age = age;
+	d->owner = owner;
 }
