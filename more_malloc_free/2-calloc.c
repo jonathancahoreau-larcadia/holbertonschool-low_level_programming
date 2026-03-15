@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+
 /**
  * _calloc - se comporte comme calloc
  * @nmemb: le nombre d'éléments
@@ -25,8 +25,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	for (i = 0; i < nmemb * size; i++)
 	{
 	ptc[i] = 0;
-	i++;
 	}
 return (ptc);
 }
-
