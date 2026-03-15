@@ -11,6 +11,9 @@ unsigned int _strlen(char *s)
 {
 	unsigned int i = 0;
 
+	if (_strlen == NULL)
+		return (0);
+
 	while (*s != '\0')
 	{
 	s++;
@@ -31,14 +34,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *nconcat;
 	unsigned int i, j, lens1, lens2;
 
-	lens1 = _strlen(s1);
-	lens2 = _strlen(s2);
-
 	if (s1 == NULL)
 		s1 = "";
 
 	if (s2 == NULL)
 		s2 = "";
+
+	lens1 = _strlen(s1);
+	lens2 = _strlen(s2);
 
 	if (n >= lens2)
 		n = lens2;
