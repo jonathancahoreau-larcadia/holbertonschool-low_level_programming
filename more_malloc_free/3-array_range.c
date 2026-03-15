@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 /**
  * array_range - tableau de valeur croissante
  * @min: valeur minimum
@@ -22,7 +21,7 @@ int *array_range(int min, int max)
 	if (pt == NULL)
 	return (NULL);
 
-	for (i = 0; i <= max; i++)
+	for (i = 0; i <= (max - min + 1); i++)
 	{
 		pt[i] = (min + i);
 	}
