@@ -1,21 +1,15 @@
 #include "main.h"
+/**
+ * _print_rev_recursion - affiche les caracteres à l'envers
+ * @s: pointeur sur un char
+ */
 void _print_rev_recursion(char *s)
 {
-	while (*s != '\0')
+	if (*s == '\0')
 	{
-		_putchar(*s);
-		s--;
+		_putchar('\0');
+		return;
 	}
-	_putchar('\0');
-	_putchar('\n');
-}
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    _print_rev_recursion("\nColton Walker");
-    return (0);
+	_print_rev_recursion(s + 1);
+	_putchar(*s);
 }
