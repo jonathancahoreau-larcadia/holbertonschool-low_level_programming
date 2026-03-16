@@ -1,5 +1,5 @@
 #include "function_pointers.h"
-
+#include <stdlib.h>
 /**
  * print_name - fonction pour imprimer un nom
  * @name: pointeur vers un caractère
