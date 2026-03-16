@@ -1,5 +1,5 @@
+#include <stdio.h>
 #include "function_pointers.h"
-
 /**
  * print_name - fonction pour imprimer un nom
  * @name: pointeur vers un caractère
@@ -7,5 +7,8 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	f(name);
+	if (name != NULL && f != NULL)
+	{
+		f(name);
+	}
 }
