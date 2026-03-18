@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
  * print_numbers - imprime tous les nombres
- * @separator: un poiteur sur un caractere constant
+ * @separator: un pointeur sur une chaine de caractere
  * @n: un entier toujours positif constant
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
@@ -11,16 +11,12 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i = 0;
 	va_list nbargs;
 
-	if (separator == NULL)
-		printf("\n");
-
-
-
 	va_start(nbargs, n);
-		printf("%d", va_arg(nbargs, unsigned int));
-		for (i = 1; i < n; i++)
+		for (i = 0; i < n; i++)
 		{
-			printf(", %d", va_arg(nbargs, unsigned int));
+			printf("%d", va_arg(nbargs, int));
+			if (separator != NULL && i < (n - 1))
+				printf("%s", separator);
 		}
 	va_end(nbargs);
 	printf("\n");
