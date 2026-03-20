@@ -62,7 +62,7 @@ void print_all(const char * const format, ...)
 	char *virg = "";
 
 	va_start(args, format);
-	while (format[i] != '\0')
+	while (format && format[i] != '\0')
 	{
 		j = 0;
 		while (tab_format[j].letter != '\0')
