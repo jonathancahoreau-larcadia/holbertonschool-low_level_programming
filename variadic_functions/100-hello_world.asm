@@ -1,5 +1,3 @@
-default rel
-
 section .data
 hworld db "Hello, World", 10
 longueur equ $-hworld
