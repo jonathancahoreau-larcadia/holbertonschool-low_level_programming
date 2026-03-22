@@ -1,16 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-int main(int argc, char *argv[] )
+/**
+ * main - point d'entrée
+ * @argc: un entier représentant le nombre d'arguments
+ * @argv: tableau de caracteres d'un arguments
+ *
+ * Return: (0) si succes
+ */
+int main(int argc, char *argv[])
 {
 	int opcode = 0;
-	int (*adress)(int, char**);
+	typedef int (*ptr_adress)(int, char **);
+	ptr_adress mem;
 	unsigned char *bytes;
 	int i = 0;
-
-	adress = &main;
-	bytes = (unsigned char*)adress;
-
 
 	if (argc != 2)
 	{
@@ -26,11 +29,14 @@ int main(int argc, char *argv[] )
 		exit(2);
 	}
 
+	mem = &main;
+	bytes = (unsigned char *)mem;
+
 	for (i = 0; i < opcode; i++)
 	{
 		printf("%02x ", bytes[i]);
 
 	}
 	printf("\n");
-	return(0);
+	return (0);
 }
