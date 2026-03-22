@@ -10,8 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int opcode = 0;
-	typedef int (*ptr_adress)(int, char **);
-	ptr_adress mem;
+	int (*adress)(int, char **);
 	unsigned char *bytes;
 	int i = 0;
 
@@ -29,8 +28,8 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
-	mem = &main;
-	bytes = (unsigned char *)mem;
+	adress = main;
+	bytes = (unsigned char *)adress;
 
 	for (i = 0; i < opcode; i++)
 	{
