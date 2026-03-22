@@ -1,6 +1,6 @@
 section .data
-hworld db "Hello, World", 10
-longueur equ $-hworld
+msg db "Hello, World", 10
+len equ $-hworld
 
 section .text
 global _start
@@ -8,8 +8,8 @@ global _start
 _start:
 	mov rax, 1
 	mov rdi, 1
-	mov rsi, hworld
-	mov rdx, longueur
+	mov rsi, msg
+	mov rdx, len
 	syscall
 
 	mov rax, 60
