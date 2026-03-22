@@ -33,8 +33,11 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < opcode; i++)
 	{
-		printf("%02x ", bytes[i]);
-
+		printf("%02x", bytes[i]);
+		if (i < (opcode - 1))
+		{
+			printf(" ");
+		}
 	}
 	printf("\n");
 	return (0);
