@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
 #include "lists.h"
 /**
  * add_node_end - ajout d'un noeud en fin de chaîne
