@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <string.h>
 #include "lists.h"
 /**
 *_strlen - calcul la longeur d'une chaine
