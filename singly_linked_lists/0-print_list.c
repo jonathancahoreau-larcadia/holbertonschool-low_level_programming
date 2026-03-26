@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include "lists.h"
+#include <stdio.h>
 /**
  * print_list - afficher la liste
  * @h: pointeur sur une structure
