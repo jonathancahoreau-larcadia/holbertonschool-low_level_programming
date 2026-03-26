@@ -2,6 +2,25 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
+*_strlen - calcul la longeur d'une chaine
+*@s: est une chaine de caractère
+*
+*Return: renvoie le nombre de boucles jusqu'au caractère de fin '\0'
+*/
+
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (*s != '\0')
+	{
+		i++;
+		s++;
+	}
+	return (i);
+}
+
+/**
  * add_node - pointeur sur fonction qui retourne une structure
  * @head: pointeur sur pointeur qui retourne l'adresse du head
  * @str: pointeur qui renvoie une chaine de caractere.
@@ -25,7 +44,7 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 	}
 
-	new->len = strlen(new->str);
+	new->len = _strlen(new->str);
 	new->next = *head;
 	*head = new;
 return (new);
