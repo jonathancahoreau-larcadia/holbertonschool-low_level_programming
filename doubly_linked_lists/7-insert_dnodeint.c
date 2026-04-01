@@ -7,14 +7,15 @@
  * @h: est un pointeur sur un pointeur qui pointe sur l'adresse de h
  * @idx: un index pour insérer le noeud
  * @n: un entier pour renseigner la valeur du noeud à insérer
+ *
  * Return: (node) renvoie le noeud dans main, (NULL) si erreur
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int i = 0;
-	dlistint_t *tmp = *h, *end = *h, *node = malloc(sizeof(dlistint_t));
-
-	idx = 0;
+	dlistint_t *tmp = *h;
+	dlistint_t *end = *h;
+	dlistint_t *node = malloc(sizeof(dlistint_t));
 
 	if (node == NULL)
 		return (NULL);
