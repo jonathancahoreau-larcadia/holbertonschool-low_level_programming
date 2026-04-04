@@ -28,12 +28,15 @@ int store_add(store_t *st, session_t *s)
 	cur = st->head;
 	while (cur) {
 		if (cur->sess && cur->sess->id && strcmp(cur->sess->id, s->id) == 0)
-			return 0;
+		{
+			session_destroy(s);
+		}	return 0;
 		cur = cur->next;
 	}
 
 	n = node_create(s);
 	if (!n) {
+		session_destroy(s);
 		return 0;
 	}
 
@@ -76,9 +79,13 @@ int store_delete(store_t *st, const char *id, session_t **out)
 				st->head = cur->next;
 
 			if (out)
+			{
 				*out = cur->sess;
-
-			session_destroy(cur->sess);
+			}
+			else
+			{
+				session_destroy(cur->sess);
+			}
 			free(cur);
 			return 1;
 		}
@@ -100,7 +107,8 @@ void store_destroy(store_t *st)
 	while (cur) {
 		next = cur->next;
 
-		session_destroy(cur->sess);
+		if (cur->sess)
+			session_destroy(cur->sess);
 
 		free(cur);
 
